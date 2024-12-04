@@ -15,6 +15,7 @@ export const authOptions: NextAuthOptions = {
           throw new Error("すべてのフィールドを入力してください");
         }
 
+        console.log("process.env.NEXT_PUBLIC_TXK_API", process.env.NEXT_PUBLIC_TXK_API);
         const res = await fetch(`${process.env.NEXT_PUBLIC_TXK_API}/account/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
